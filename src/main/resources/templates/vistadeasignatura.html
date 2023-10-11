@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${titulo}"></title>
+</head>
+
+<body>
+	<h1 th:text="${tituloH1}"></h1>
+	<tbody>
+		<tr th:each="asignatura: ${listadodeasignatura}">
+		<td th:text="${'Id: '+ asignatura.getId()}"></td>
+		<td th:text="${'nombre : ' + asignatura.getNombre()}"></td>
+		<td th:text="${'descripcion: ' + asignatura.getDescripcion()}"></td>
+		<td th:text="${'la asignatura es: ' + asignatura.getAsignatura()}"></td>
+		<td th:text="${'numeroCreditos:' + asignatura.getNumerocreditos()}"></td>
+		<td th:text="${'numerodeAlumnosMatriculados:' + asignatura.getNumerodeAlumnosMatriculados()}"></td>
+		</tr>
+	</tbody>
+
+
+</body>
+
+</html>
